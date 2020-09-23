@@ -1,0 +1,21 @@
+//Bipartite Graph Test
+V = No of vertex 
+
+visited[V]
+//Define two colors 0 and 1
+color[V]
+
+boolean DFS(source,col) :
+    visited[source] = true
+    color[source] = col
+    for every neighbor u of source :
+        if(visited[u]==false) :
+            if(DFS(u,col^1)==false) :
+                return false
+        else:
+            if(color[u] == color[source]) :
+                return false
+    
+    return true
+
+    
