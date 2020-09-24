@@ -1,0 +1,23 @@
+//Connected components 
+
+count-> no of Connected components
+V-> No of vertices 
+visited[V]
+
+count = 0;
+for every vertex u in graph : 
+    if u is not visited :
+        count++
+        DFS(u)
+
+print(count)
+
+
+//DFS function
+
+void DFS(source) :
+    visited[source] = true
+    for every neighbor u of source :
+        if u is not visited :
+            DFS(u)
+

@@ -1,0 +1,15 @@
+//In and Out times calculation 
+V-> No of vertex
+visited[V]
+in[V] -> In time of a node 
+out[] -> Out time of a node 
+timer -> initialized to 0
+
+void DFS(source) :
+    visited[source] = true
+    in[source] = ++timer
+    for every neighbor u of source :
+        if u is not visited:
+            DFS(u)
+        
+    out[source] = ++timer

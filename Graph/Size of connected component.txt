@@ -1,0 +1,15 @@
+//Size of a connected component
+V -> No oof vertices 
+visited[V] -> false,fasle ... V times 
+
+root-> root vertex of connected component
+
+int DFS(root) :
+    int count = 0
+    visited[root] = true
+    for every neighbor u of root    
+        if u is not visited
+            count = DFS(u)
+
+    return 1+count
+
