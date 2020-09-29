@@ -1,0 +1,23 @@
+///Single source shortest Path using BFS for a graph 
+
+V-> no of vertices 
+visited[V] = {false,false ..... V times}
+distance[V] = {-1, ...... V times}
+
+Queue q = new Queue()
+
+source-> source vertex 
+
+q.add(source)
+distance[source] = 0
+
+while q is not empty :
+    u = q.remove()
+    for every neighbor v of u :
+        if v is not visited :
+            visited[v] = true
+            distance[v] = distance[u] + 1
+            q.add(v)
+
+
+//Now distance list contains shortest possible distance of every vertex from source

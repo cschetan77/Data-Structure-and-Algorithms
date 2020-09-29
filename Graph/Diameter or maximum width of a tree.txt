@@ -1,0 +1,8 @@
+//Diameter of a undirected acyclic graph 
+//Width of a tree
+
+Take any node n1 and do a dfs and find out the farthest node from it 
+Consider as n2
+
+Then initialize a dist variable to zero and do a dfs on n2 such that maximum 
+value of dist is the width or diameter of the tree.
