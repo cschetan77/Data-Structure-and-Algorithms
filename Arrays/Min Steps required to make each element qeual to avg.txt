@@ -1,0 +1,22 @@
+//Given an Array 
+A[N] = {a1,a2,a3, .....,aN}
+
+avg = (a1+a2+a3+.....)/N
+
+B[N] // Initialize a second array 
+B[1] = 0
+
+loop i=1 to i=N-1 :
+    B[i+1] = A[i] + B[i] - avg
+    i++
+
+
+//median
+m = -B[N/2]
+
+count = 0
+loop i=1 to i=N :
+    count = count + abs(B[i] + m)
+    i++
+
+print(count)
