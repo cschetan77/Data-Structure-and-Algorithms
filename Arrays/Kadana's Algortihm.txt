@@ -1,0 +1,27 @@
+//Kadanan's Algorithm 
+//Maximum sum contiguos subarray 
+
+
+
+public static int maxSumSubarray(int[] arr, int n) {
+    //Maximum ending here 
+    int meh = 0;
+
+    //Maximum sum so far 
+    int msf = Integer.MIN_VALUE;
+
+    for(int i : arr) {
+        meh = meh + i;
+
+        if(meh < i) {
+            meh = i;
+        }
+        if(msf < meh) {
+            msf = meh;
+        }
+    }
+    return msf;
+
+
+}
+
