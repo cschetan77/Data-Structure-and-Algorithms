@@ -1,0 +1,27 @@
+ //Count subarray with given sum k
+ 
+ 
+ 
+ public int subarraySum(int[] nums, int k) {
+        int count = 0;
+        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>();
+        int curr_sum = 0;
+        for(int i=0;i<nums.length;i++) {
+            curr_sum += nums[i];
+            if(curr_sum == k) {
+                count++;
+            }
+            if(hm.containsKey(curr_sum-k)) {
+                count = count + hm.get(curr_sum-k);
+    
+            }
+            if(hm.containsKey(curr_sum))
+                hm.put(curr_sum,hm.get(curr_sum)+1);
+            else 
+                hm.put(curr_sum,1);
+        
+            
+            
+        }
+        return count;
+    }
